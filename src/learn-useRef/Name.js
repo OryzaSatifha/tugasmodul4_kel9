@@ -15,7 +15,7 @@ export default function Name() {
         <p className="Text">Kelompok 9</p>
             <input placeholder="Tulis disini" type="Text" value={name} onChange={e => setName(e.target.value)} />
             <p className="Text"> My Name is {name} </p>
-            <p>I rendered {renderCount.current} times</p>
+            <p>This page rendered {renderCount.current} times</p>
             </div>
         </>
     )

@@ -13,6 +13,7 @@ function reducer(todos, action) {
         case ACTIONS.ADD_TODO:
             return [...todos, newTodo(action.payload.name)]
         case ACTIONS.TOGGLE_TODO:
+
             return todos.map(todo => {
                 if (todo.id === action.payload.id) {
                     return { ...todo, complete: !todo.complete }
@@ -20,6 +21,7 @@ function reducer(todos, action) {
                 return todo
             })
         case ACTIONS.DELETE_TODO:
+            console.log('string masuk')
             return todos.filter(todo => todo.id !== action.payload.id)
         default:
             return todos
@@ -44,9 +46,10 @@ export default function Index() {
 
     return (
         <>
-            <div className="Main2">
-                <form onSubmit={handleSubmit}>
-                    <input type="text2" value={name} onChange={e => setName(e.target.value)} />
+            <div className="Main">
+            <p className="Text">Kelompok 9</p>
+                <form type="tab" onSubmit={handleSubmit}>
+                <input placeholder="Masukkan daftar list" type="Text" value={name} onChange={e => setName(e.target.value)} />
                 </form>
                 {todos.map(todo => {
                     return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
