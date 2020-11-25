@@ -1,0 +1,28 @@
+.Main2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  }
+input[type=text2] {
+    width: 160%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #132444;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+input[type=text2]:focus {
+    border: 3px solid #555;
+  }
+  .Text{
+    font-size: 50px;
+  }
+  
